@@ -66,12 +66,24 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## RUN - tips for ME:
+Rodar o container
 ```Shell
-./vendor/bin/sail up -d para rodar o container
+./vendor/bin/sail up -d
 ```
 
+Rodar o vite e carregar o tailwind
 ```Shell
-./vendor/bin/sail npm run dev para rodar o vite e carregar o tailwind
+./vendor/bin/sail npm run dev
+```
+rodar o npm e baixar dependências
+*possível problema no start do tailwind - que usa o vite*
+```Shell
+./vendor/bin/sail npm install
+```
+
+Rodar as migrates do banco de dados
+```Shell
+./vendor/bin/sail art migrate
 ```
 
 ## Laravel - commands:
@@ -79,3 +91,12 @@ Criar Componente:
 ```Shell
 ./vendor/bin/sail art make:component checkout.<nome do componente> {--view para caso queira somente a VIEW!}
 ```
+
+Criar Arquivo de Model:
+```Shell
+./vendor/bin/sail art make:model <nome da model> -m
+```
+
+## Infos
+- Model: abstração da tabela do banco de dados no projeto.
+- 
