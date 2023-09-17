@@ -92,11 +92,28 @@ Criar Componente:
 ./vendor/bin/sail art make:component checkout.<nome do componente> {--view para caso queira somente a VIEW!}
 ```
 
-Criar Arquivo de Model:
+Criar Arquivo de Model com sua respectiva migration:
 ```Shell
 ./vendor/bin/sail art make:model <nome da model> -m
 ```
 
+Criar Arquivo de Factory:
+```Shell
+./vendor/bin/sail art make:factory <nome da factory>
+```
+
+Criar Arquivo de Seed:
+```Shell
+./vendor/bin/sail art make:seeder <nome da seed>
+```
+
+Rodar as seeds e factories (popular BD):
+```Shell
+./vendor/bin/sail art db:seed
+```
+
 ## Infos
 - Model: abstração da tabela do banco de dados no projeto.
-- 
+- Migration: Esquema da tabela para ser criada/modificada/rollback quando realizada a migration
+- Factory: Popular previamente o database com informações fakes. Alternativa eficaz para substituir a inserção manual. (É a definição do que a seed que criamos vai inserir no banco de dados)
+- seed: seeds criadas para popular o banco de dados.
