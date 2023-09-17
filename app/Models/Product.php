@@ -12,7 +12,7 @@ class Product extends Model
 {
     use HasFactory, SoftDeletes;
 
-    rotected $fillable = [
+    protected $fillable = [
         'brand_id',
         'category_id',
         'name',
