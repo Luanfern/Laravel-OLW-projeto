@@ -112,6 +112,11 @@ Rodar as seeds e factories (popular BD):
 ./vendor/bin/sail art db:seed
 ```
 
+Rodar Migrate das seeds e factories (:fresh para limpar o banco antes):
+```Shell
+./vendor/bin/sail art migrate:fresh --seed
+```
+
 ## Infos
 - Model: abstração da tabela do banco de dados no projeto.
 - Migration: Esquema da tabela para ser criada/modificada/rollback quando realizada a migration
